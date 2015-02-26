@@ -19,6 +19,19 @@
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <style type="text/css" media="screen">
+    .reveal code {
+      background-color: #393939;
+      border-radius: 0.3em;
+      padding: 0.0em 0.0em 0.1em 0.1em;
+
+
+    }
+    .reveal li {
+      margin: 0.5em 0.5em 0.5em 0.5em;
+
+    }
+    </style>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -135,12 +148,19 @@
         </section>
 
 				<section>
-					<h2>Point of View</h2>
+					<h2>Basic flow</h2>
+          <small><ul>
+              <li><code>git init</code>  Create a repository with in the project root directory.</li>
+              <li><code>git add .</code>  Add changes to staging area, i.e., create a snapshot of the changes you have made.</li>
+              <li><code>git commit -m "your commit message"</code> Commit the staged changes to repository.</li>
+              <li><code>git remote add &lt;name&gt; &lt;URL&gt;</code> Add a reference to a remote repository.</li>
+              <li><code>git push &lt;name&gt; master</code> Upload (synchronize) current branch to remote repository.</li>
+            </ul></small>
 					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
+            
 					</p>
 					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+            Note: You should have the <strong>upstream</strong> branch setup for current branch when using <code>git push</code>.
 					</p>
 				</section>
 
