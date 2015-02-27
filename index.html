@@ -15,13 +15,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
     <style type="text/css" media="screen">
     .reveal code {
-      background-color: #393939;
+      background-color: #EADBB1;
       border-radius: 0.3em;
       padding: 0.0em 0.0em 0.1em 0.1em;
 
@@ -147,47 +147,74 @@
           </section>
         </section>
 
-				<section>
-					<h2>Basic flow</h2>
-          <small><ul>
-              <li><code>git init</code>  Create a repository with in the project root directory.</li>
-              <li><code>git add .</code>  Add changes to staging area, i.e., create a snapshot of the changes you have made.</li>
-              <li><code>git commit -m "your commit message"</code> Commit the staged changes to repository.</li>
-              <li><code>git remote add &lt;name&gt; &lt;URL&gt;</code> Add a reference to a remote repository.</li>
-              <li><code>git push &lt;name&gt; master</code> Upload (synchronize) current branch to remote repository.</li>
-            </ul></small>
-					<p>
-            
-					</p>
-					<p>
-            Note: You should have the <strong>upstream</strong> branch setup for current branch when using <code>git push</code>.
-					</p>
-				</section>
+        <section>
+          <section>
+            <h2>Basic flow</h2>
+            <small><ul>
+                <li><code>git init</code>  Create a repository with in the project root directory.</li>
+                <li><code>git add .</code>  Add changes to staging area, i.e., create a snapshot of the changes you have made.</li>
+                <li><code>git commit -m "your commit message"</code> Commit the staged changes to repository.</li>
+                <li><code>git remote add &lt;name&gt; &lt;URL&gt;</code> Add a reference to a remote repository.</li>
+                <li><code>git push &lt;name&gt; master</code> Upload (synchronize) current branch to remote repository.</li>
+              </ul></small>
+            <p>
+              
+            </p>
+            <p>
+              Note: You should have the <strong>upstream</strong> branch setup for current branch when using <code>git push</code>.
+            </p>
+          </section>
+        </section>
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
+        <section>
+          <section>
+            <h2>A demo in SmartGit</h2>
+            <p>Why SmartGit?</p>
+            <small><ul>
+                <li>Full featured GUI</li>
+                <li>Standalone: supporting various workflow.</li>
+                <li>Cross platform: available on Windows, Linux, Mac OS</li>
+              </ul></small>
+          </section>
+          <section>
+            <h2>Creating a git repository</h2>
+            <ul>
+              <li>LOCAL: <code>git init</code> &amp; <code>git clone</code></li>
+              <li>GITHUB: Create and Fork</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Prepare for commit</h2>
+            <ul>
+              <li>Staging the difference: <br><code>git add &lt;filepath&gt;</code>.</li>
+              <li>Create a commit in the repository.<br><code>git commit -m "&lt;description&gt;"</code></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Synchronizing reposiory</h2>
+            <ul>
+              <li>Create a local mirroring repository: <br><code>git clone &lt;URL&gt; &lt;dir&gt;</code></li>
+              <li>Pull (download) from the upstream: <br><code>git pull</code></li>
+              <li>Push (upload) to the upstream: <br><code>git push</code></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Forking on Github?</h2>
+            It is just <code>git clone</code> on Github.
+          </section>
+        </section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
+        <section>
+          <section>
+            <h2>Management and collaboration on Github</h2>
+            <ul>
+              <li>Creating repository (project)</li>
+              <li>Forking repository</li>
+              <li>Issue management</li>
+              <li>Pull request</li>
+            </ul>
+          </section>
+        </section>
 
 				<section>
 					<section id="fragments">
@@ -226,23 +253,6 @@
 					</p>
 				</section>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
 
 				<section>
 					<section data-background="#dddddd">
