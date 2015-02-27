@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="css/theme/solarized-stylish.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -64,14 +64,12 @@
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section style='text-align: left'>
-						<h2>Recap: Version Control System</h2>
-						<p>Commit: A change set.</p>
-						<p>Branch: A sequence of commits representing edit history.</p>
-            <p>Repository: A place (directory) where branches live.</p>
-						<!-- <br> -->
-						<!-- <a href="#" class="navigate-down"> -->
-						<!-- 	<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"> -->
-						<!-- </a> -->
+						<h2>Recap</h2>
+            <hr>
+						<p class="fragment roll-in"><strong>Commit:</strong> A snapshot of chanages made between two versions.</p>
+						<p class="fragment roll-in"><strong>Branch:</strong> A sequence of commits representing editing history.</p>
+            <p class="fragment roll-in"><strong>Repository:</strong> A place (directory) where branches live.</p>
+            <p class="fragment roll-in"><strong>Working Directory:</strong> The directory where the normal files are stored.</p>
 					</section>
 					<section>
 						<h2>Commit</h2>
@@ -91,67 +89,74 @@
 				</section>
 
         <section>
-          <section>
+          <section style="text-align: left">
             <h2>What is Github?</h2>
-            <small>
-              <ul>
-                <li>It is online platform holding <b>repositories</b>.</li>
-                <li>It is a project management platform for
-                  <ul>
-                    <li>hosting documents</li>
-                    <li>communicating bugs and features</li>
-                    <li>profiling the work load</li>
-                  </ul>
-                </li>
-                <li>You can even setup static website on it.</li>
-              </ul>
-            </small>
-            <img style="max-height:300px" src="./img/octocat.png" alt="Github is evil?">
+            <hr>
+            <img style="max-height:200px" src="./img/octocat.png" alt="Github is evil?">
+            <ul>
+              <li>It is online platform holding <b>repositories</b>.</li>
+              <li>It is a project management platform for
+                <ul>
+                  <li>hosting documents</li>
+                  <li>communicating bugs and features</li>
+                  <li>profiling the work load</li>
+                </ul>
+              </li>
+              <li>You can even setup static website on it.</li>
+            </ul>
           </section>
           <section>
+            <div style="text-align: left">
             <h2>Clone or Fork?</h2>
-            <small>
+            <hr>
+            <ul>
+              <li>They both create a mirroring repository.</li>
               <ul>
-                <li>They both create a mirroring repository.</li>
-                  <ul>
-                    <li>Branches (history)</li>
-                    <li>Working directory (all the files being tracked)</li>
-                  </ul>
-                </li>
+                <li>Branches (history)</li>
+                <li>Working directory (all the files being tracked)</li>
               </ul>
-            </small>
-            <img style="max-height:300px" src="./img/clone_or_fork.png" alt="">
+              </li>
+            </ul></div>
+            <img style="max-height:200px" src="./img/clone_or_fork.png" alt="">
           </section>
           <section>
+            <div style="text-align: left">
             <h2>Pull and Push</h2>
+            <hr>
+            <ul>
+              <li>Both are used to synchronize the history (branch)</li>
+              <ul>
+                <li><code>Push</code> will update <strong>REMOTE</strong> repository with a local branch.</li>
+                <li><code>Pull</code> will update <strong>LOCAL</strong> repository with a remote branch.</li>
+              </ul>
+              </li>
+            </ul></div>
             <img style="max-height:200px" src="./img/download.png" alt="">
             <img style="max-height:200px" src="./img/upload.png" alt=""/>
-            <small>
-              <ul>
-                <li>Both are used to synchronize the history (branch)</li>
-                  <ul>
-                    <li><code>Push</code> will update <strong>REMOTE</strong> repository with a local branch.</li>
-                    <li><code>Pull</code> will update <strong>LOCAL</strong> repository with a remote branch.</li>
-                  </ul>
-                </li>
-              </ul>
-            </small>
           </section>
         </section>
 
         <section>
           <section>
             <h2>Basic flow</h2>
-            <small><ul>
-                <li><code>git init</code>  Create a repository with in the project root directory.</li>
-                <li><code>git add .</code>  Add changes to staging area, i.e., create a snapshot of the changes you have made.</li>
-                <li><code>git commit -m "your commit message"</code> Commit the staged changes to repository.</li>
-                <li><code>git remote add &lt;name&gt; &lt;URL&gt;</code> Add a reference to a remote repository.</li>
-                <li><code>git push &lt;name&gt; master</code> Upload (synchronize) current branch to remote repository.</li>
-              </ul></small>
+            <!-- TODO rearrange the text-->
+            <ul>
+              <li><code>git init</code>  Create a repository with in the project root directory.</li>
+              <li><code>git add .</code>  Add changes to staging area, i.e., create a snapshot of the changes you have made.</li>
+              <li><code>git commit -m "your commit message"</code> Commit the staged changes to repository.</li>
+            </ul>
             <p>
               
             </p>
+          </section>
+          <section>
+            <h2>Working with Remote Repository</h2>
+            <!-- TODO rearrange the text-->
+            <ul>
+              <li><code>git remote add &lt;name&gt; &lt;URL&gt;</code> Add a reference to a remote repository.</li>
+              <li><code>git push &lt;name&gt; master</code> Upload (synchronize) current branch to remote repository.</li>
+              <li><code>git pull &lt;name&gt; master</code> Upload (synchronize) current branch to remote repository.</li>
+            </ul>
             <p>
               Note: You should have the <strong>upstream</strong> branch setup for current branch when using <code>git push</code>.
             </p>
