@@ -90,6 +90,60 @@
 
         <section>
           <section style="text-align: left">
+            <h2>Basic flow</h2>
+            <hr>
+            <small>
+              <ul>
+                <li><code>git init</code>  Create a repository with in the project root directory.</li>
+                <li><code>git add .</code>  Add changes to staging area, i.e., create a snapshot of the changes you have made.</li>
+                <li><code>git commit -m "your commit message"</code> Commit the staged changes to repository.</li>
+                <li><code>git checkout &lt;branch&gt;</code> Check out another branch.</li>
+              </ul>
+              <div style="text-align: center">
+                <img src="./img/Git workflow.svg" alt="">
+              </div>
+            </small>
+          </section>
+          <section style="text-align: left">
+            <h2>Working with Remote Repository</h2>
+            <hr>
+            <p> Remote repository is just another <code>.git</code> directory locate somewhere else.
+            <small>
+            <ul>
+              <li><code>git clone &lt;URL&gt;</code> Create a local mirror of the remote repository.</li>
+              <li><code>git remote add &lt;name&gt; &lt;URL&gt;</code> Add a reference to a remote repository.</li>
+              <li><code>git push &lt;name&gt; &lt;branch&gt;</code> Upload (synchronize) current branch to remote repository.</li>
+              <li><code>git pull &lt;name&gt; &lt;branch&gt;</code> Upload (synchronize) current branch to remote repository.</li>
+            </ul>
+            </small>
+            <small><p>
+              You may use <code>--upstream &lt;branch&gt;</code> when calling <code>git push</code> to setup the default upstream branch.
+              </p></small>
+          </section>
+          <section style="text-align: left">
+            <h2>Summary</h2>
+            <hr>
+            <div style="text-align: center">
+              <img src="./img/Git-Github flowchart.svg" alt="" style="max-height: 600px"/>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section style="text-align: left">
+            <h2>When something happened</h2>
+            <hr>
+            <ul>
+              <li><code>git log</code> Viewing the history of current branch.</li>
+              <li><code>git checkout &lt;ref&gt;</code> Update the working directory to the states of a branch/tag/commit.</li>
+              <li><code>git revert &lt;ref&gt;</code> Create a new commit to revert the changes made since <code>ref</code>.</li>
+              <li><code>git checkout -b &lt;new branch&gt;</code> Create a new branch from current point.</li>
+              <li><code>git merge &lt;branch&gt;</code> Merge the changes from another branch.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section style="text-align: left">
             <h2>What is Github?</h2>
             <hr>
             <img style="max-height:200px" src="./img/octocat.png" alt="Github is evil?">
@@ -138,49 +192,6 @@
 
         <section>
           <section style="text-align: left">
-            <h2>Basic flow</h2>
-            <hr>
-            <ul>
-              <li><code>git init</code>  Create a repository with in the project root directory.</li>
-              <li><code>git add .</code>  Add changes to staging area, i.e., create a snapshot of the changes you have made.</li>
-              <li><code>git commit -m "your commit message"</code> Commit the staged changes to repository.</li>
-            </ul>
-          </section>
-          <section style="text-align: left">
-            <h2>Working with Remote Repository</h2>
-            <hr>
-            <ul>
-              <li><code>git clone &lt;URL&gt;</code> Create a local mirror of the remote repository.</li>
-              <li><code>git remote add &lt;name&gt; &lt;URL&gt;</code> Add a reference to a remote repository.</li>
-              <li><code>git push &lt;name&gt; &lt;branch&gt;</code> Upload (synchronize) current branch to remote repository.</li>
-              <li><code>git pull &lt;name&gt; &lt;branch&gt;</code> Upload (synchronize) current branch to remote repository.</li>
-            </ul>
-            <small><p>
-              You may use <code>--upstream &lt;branch&gt;</code> when calling <code>git push</code> to setup the default upstream branch.
-              </p></small>
-          </section>
-          <section style="text-align: left">
-            <h2>Summary</h2>
-            <hr>
-            <img src="./img/Git-Github flowchart.svg" alt="" style="max-height: 600px"/>
-          </section>
-        </section>
-        <section>
-          <section style="text-align: left">
-            <h2>When something happened</h2>
-            <hr>
-            <ul>
-              <li><code>git log</code> Viewing the history of current branch.</li>
-              <li><code>git checkout &lt;ref&gt;</code> Update the working directory to the states of a branch/tag/commit.</li>
-              <li><code>git revert &lt;ref&gt;</code> Create a new commit to revert the changes made since <code>ref</code>.</li>
-              <li><code>git checkout -b &lt;new branch&gt;</code> Create a new branch from current point.</li>
-              <li><code>git merge &lt;branch&gt;</code> Merge the changes from another branch.</li>
-            </ul>
-          </section>
-        </section>
-
-        <section>
-          <section style="text-align: left">
             <h2>A demo in SmartGit (Github)</h2>
             <hr>
             <p>Why SmartGit?</p>
@@ -191,7 +202,7 @@
             </ul>
           </section>
           <section style="text-align: left">
-            <h2>Creating a git repository</h2>
+            <h2>Scene 1: Creating a git repository</h2>
             <hr>
             <ul>
               <li>LOCAL: <code>git init</code> &amp; <code>git clone</code></li>
