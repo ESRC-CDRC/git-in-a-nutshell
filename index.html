@@ -137,86 +137,95 @@
         </section>
 
         <section>
-          <section>
+          <section style="text-align: left">
             <h2>Basic flow</h2>
-            <!-- TODO rearrange the text-->
+            <hr>
             <ul>
               <li><code>git init</code>  Create a repository with in the project root directory.</li>
               <li><code>git add .</code>  Add changes to staging area, i.e., create a snapshot of the changes you have made.</li>
               <li><code>git commit -m "your commit message"</code> Commit the staged changes to repository.</li>
             </ul>
-            <p>
-              
-            </p>
           </section>
-          <section>
+          <section style="text-align: left">
             <h2>Working with Remote Repository</h2>
-            <!-- TODO rearrange the text-->
+            <hr>
             <ul>
+              <li><code>git clone &lt;URL&gt;</code> Create a local mirror of the remote repository.</li>
               <li><code>git remote add &lt;name&gt; &lt;URL&gt;</code> Add a reference to a remote repository.</li>
-              <li><code>git push &lt;name&gt; master</code> Upload (synchronize) current branch to remote repository.</li>
-              <li><code>git pull &lt;name&gt; master</code> Upload (synchronize) current branch to remote repository.</li>
+              <li><code>git push &lt;name&gt; &lt;branch&gt;</code> Upload (synchronize) current branch to remote repository.</li>
+              <li><code>git pull &lt;name&gt; &lt;branch&gt;</code> Upload (synchronize) current branch to remote repository.</li>
             </ul>
-            <p>
-              Note: You should have the <strong>upstream</strong> branch setup for current branch when using <code>git push</code>.
-            </p>
+            <small><p>
+              You may use <code>--upstream &lt;branch&gt;</code> when calling <code>git push</code> to setup the default upstream branch.
+              </p></small>
           </section>
-          <section>
+          <section style="text-align: left">
+            <h2>Summary</h2>
+            <hr>
+            <img src="./img/Git-Github flowchart.svg" alt="" style="max-height: 600px"/>
+          </section>
+        </section>
+        <section>
+          <section style="text-align: left">
             <h2>When something happened</h2>
-            <small><ul>
-                <li><code>git log</code> Viewing the history of current branch.</li>
-                <li><code>git checkout &lt;ref&gt;</code> Update the working directory to the states of a branch/tag/commit.</li>
-                <li><code>git revert &lt;ref&gt;</code> Create a new commit to revert the changes made since <code>ref</code>.</li>
-                <li><code>git checkout -b &lt;new branch&gt;</code> Create a new branch from current point.</li>
-                <li><code>git merge &lt;branch&gt;</code> Merge the changes from another branch.</li>
-              </ul></small>
-            <p>
-              
-            </p>
+            <hr>
+            <ul>
+              <li><code>git log</code> Viewing the history of current branch.</li>
+              <li><code>git checkout &lt;ref&gt;</code> Update the working directory to the states of a branch/tag/commit.</li>
+              <li><code>git revert &lt;ref&gt;</code> Create a new commit to revert the changes made since <code>ref</code>.</li>
+              <li><code>git checkout -b &lt;new branch&gt;</code> Create a new branch from current point.</li>
+              <li><code>git merge &lt;branch&gt;</code> Merge the changes from another branch.</li>
+            </ul>
           </section>
         </section>
 
         <section>
-          <section>
-            <h2>A demo in SmartGit</h2>
+          <section style="text-align: left">
+            <h2>A demo in SmartGit (Github)</h2>
+            <hr>
             <p>Why SmartGit?</p>
-            <small><ul>
-                <li>Full featured GUI</li>
-                <li>Standalone: supporting various workflow.</li>
-                <li>Cross platform: available on Windows, Linux, Mac OS</li>
-              </ul></small>
+            <ul>
+              <li>Full featured GUI</li>
+              <li>Standalone: supporting various workflow.</li>
+              <li>Cross platform: available on Windows, Linux, Mac OS</li>
+            </ul>
           </section>
-          <section>
+          <section style="text-align: left">
             <h2>Creating a git repository</h2>
+            <hr>
             <ul>
               <li>LOCAL: <code>git init</code> &amp; <code>git clone</code></li>
               <li>GITHUB: Create and Fork</li>
             </ul>
           </section>
-          <section>
-            <h2>Prepare for commit</h2>
+          <section style="text-align: left">
+            <h2>Commit to a repository</h2>
+            <hr>
             <ul>
               <li>Staging the difference: <br><code>git add &lt;filepath&gt;</code>.</li>
               <li>Create a commit in the repository.<br><code>git commit -m "&lt;description&gt;"</code></li>
             </ul>
           </section>
-          <section>
+          <section style="text-align: left">
             <h2>Synchronizing reposiory</h2>
+            <hr>
             <ul>
               <li>Create a local mirroring repository: <br><code>git clone &lt;URL&gt; &lt;dir&gt;</code></li>
               <li>Pull (download) from the upstream: <br><code>git pull</code></li>
               <li>Push (upload) to the upstream: <br><code>git push</code></li>
             </ul>
           </section>
-          <section>
+          <section style="text-align: left">
             <h2>Forking on Github?</h2>
+            <hr>
             It is just <code>git clone</code> on Github.
           </section>
         </section>
 
         <section>
-          <section>
+          <section style="text-align: left">
             <h2>Management and collaboration on Github</h2>
+            <hr>
             <ul>
               <li>Creating repository (project)</li>
               <li>Forking repository</li>
@@ -226,8 +235,9 @@
               <li>Tag Tag Tag</li>
             </ul>
           </section>
-          <section>
+          <section style="text-align: left">
             <h2>Day to Day Routine</h2>
+            <hr>
             <ul>
               <li>Always pull before push to make sure the changes in the remote branch integrates with your new changes.</li>
                 <ul>
@@ -240,8 +250,9 @@
           </section>
         </section>
 
-        <section>
+        <section style="text-align: left">
           <h2>Learning resources</h2>
+          <hr>
           <ul>
             <li><a href="https://www.atlassian.com/git/" target="_blank">https://www.atlassian.com/git/</a></li>
             <li><a href="https://help.github.com/" target="_blank">https://help.github.com/</a></li>
@@ -250,20 +261,24 @@
           </ul>
         </section>
         <section>
-          <h1>Debates</h1>
-          <ul>
-            <li class="fragment roll-in">Merge <em>vs</em> Rebase</li>
-            <li class="fragment roll-in">Pull <em>vs</em> Fetch then Merger/Rebase</li>
-            <li class="fragment roll-in">Revert <em>vs</em> Reset</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Debates (My recommendation)</h2>
-          <ul>
-            <li>Merge <em>vs</em> <span style="text-decoration: line-through">Rebase</span></li>
-            <li>Pull <em>vs</em> <span style="text-decoration: line-through">Fetch then Merger/Rebase</span></li>
-            <li>Revert <em>vs</em> <span style="text-decoration: line-through">Reset</span></li>
-          </ul>
+          <section style="text-align: left" data-transition="fade">
+            <h1>Debates</h1>
+            <hr>
+            <ul>
+              <li class="fragment roll-in">Merge <em>vs</em> Rebase</li>
+              <li class="fragment roll-in">Pull <em>vs</em> Fetch then Merger/Rebase</li>
+              <li class="fragment roll-in">Revert <em>vs</em> Reset</li>
+            </ul>
+          </section>
+          <section style="text-align: left" data-transition="fade">
+            <h1>Debates</h1>
+            <hr>
+            <ul>
+              <li>Merge <em>vs</em> <span style="text-decoration: line-through">Rebase</span></li>
+              <li>Pull <em>vs</em> <span style="text-decoration: line-through">Fetch then Merger/Rebase</span></li>
+              <li>Revert <em>vs</em> <span style="text-decoration: line-through">Reset</span></li>
+            </ul>
+          </section>
         </section>
 			</div>
 
