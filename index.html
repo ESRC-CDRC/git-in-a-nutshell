@@ -400,6 +400,13 @@
             </ul>
           </section>
         </section>
+
+        <section>
+          <h4>Git commit -m</h4>
+          <h1>"The end"</h1>
+          <hr>
+          <p>Thanks &amp; Questions</p>
+        </section>
 			</div>
 
 		</div>
@@ -487,8 +494,10 @@
 
           $('#' + containerElem.id + '-jp').jPlayer({
             ready: function () {
+              title = $(containerElem).attr('data-video-url').split('/');
+              title = title[title.length - 1];
               $(this).jPlayer('setMedia', {
-                title: $(containerElem).attr('data-video-url'),
+                title: title,
                 m4v: $(containerElem).attr('data-video-url'),
               });
             },
