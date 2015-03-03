@@ -99,10 +99,11 @@
             <small>
               <ul>
                 <li><code>git init</code>  Create a repo with in the project root directory</li>
+                <li><code>git checkout -b &lt;branch&gt;</code> Create a new branch starting from the latest commit (branch out)</li>
                 <li><code>git add .</code>  Add changes to staging area, i.e., create a snapshot of the changes you have made</li>
                 <li><code>git commit -m "your commit message"</code> Commit the staged changes to repo</li>
+                <li><code>git tag &lt;name&gt;</code> Mark a commit with a name</li>
                 <li><code>git checkout &lt;branch&gt;</code> Check out another branch</li>
-                <li><code>git tag &lt;name&gt;</code> Check out another branch</li>
               </ul>
               <div style="text-align: center">
                 <img src="./img/Git workflow.svg" alt="">
@@ -122,7 +123,7 @@
             </ul>
             </small>
             <small><p>
-              You may use <code>--upstream &lt;branch&gt;</code> when calling <code>git push</code> to setup the default upstream branch.
+              <!-- You may use <code>&#45;&#45;upstream &#38;lt;branch&#38;gt;</code> when calling <code>git push</code> to setup the default upstream branch. -->
               </p></small>
           </section>
           <section style="text-align: left">
@@ -217,18 +218,32 @@
         <section>
           <section style="text-align: left">
             <h2>Scene 2</h2>
-            <h4>Commit to a repository</h4>
+            <h4>Managing Commits</h4>
             <hr>
             <ul>
               <li>Staging the difference: <br><code>git add &lt;filepath&gt;</code></li>
               <li>Create a commit in the repo<br><code>git commit -m "&lt;description&gt;"</code></li>
+              <li>Create a new branch<br><code>git checkout -b &lt;branch&gt;</code></li>
+              <li>Tag a commit<br><code>git tag &lt;name&gt;</code></li>
             </ul>
           </section>
           <section style="text-align: left">
-            <h2>Scene 2</h2>
+            <h2>Scene 2-1</h2>
             <h4>Commit to a repository</h4>
             <hr>
             <div id="jp-github-commit" class="jp-video " role="application" aria-label="media player" style="margin-left: auto; margin-right: auto; text-align: center" data-video-url="./media/git-example-commit.mp4"></div>
+          </section>
+          <section style="text-align: left">
+            <h2>Scene 2-2</h2>
+            <h4>Create a new branch</h4>
+            <hr>
+            <div id="jp-github-new-branch" class="jp-video " role="application" aria-label="media player" style="margin-left: auto; margin-right: auto; text-align: center" data-video-url="./media/git-example-new-branch.mp4"></div>
+          </section>
+          <section style="text-align: left">
+            <h2>Scene 2-3</h2>
+            <h4>Create a new tag</h4>
+            <hr>
+            <div id="jp-github-new-tag" class="jp-video " role="application" aria-label="media player" style="margin-left: auto; margin-right: auto; text-align: center" data-video-url="./media/git-example-new-tag.mp4"></div>
           </section>
         </section>
         <section>
