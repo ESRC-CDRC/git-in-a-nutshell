@@ -76,6 +76,15 @@
 						<p class="fragment roll-in"><strong>Commit:</strong> A snapshot of changes made between two versions</p>
 						<p class="fragment roll-in"><strong>Branch:</strong> A sequence of commits representing editing history</p>
             <p class="fragment roll-in"><strong>Repository:</strong> A place (directory) where branches live</p>
+            <aside class="notes">
+              <ul>
+                <li>list of concepts</li>
+                <li>4 types of objects</li>
+                <li>project files, working set</li>
+                <li>change sets, basically the difference between two version</li>
+                <li>calling as branch means it can split and merge</li>
+              </ul>
+            </aside>
 					</section>
 					<section>
 						<h2>Commit</h2>
@@ -115,13 +124,13 @@
           <section style="text-align: left">
             <h2>Working with Remote Repo</h2>
             <hr>
-            <p> Remote repo is just another <code>.git</code> directory locate somewhere else.
+            <p> Remote repo is just another <code>.git</code> directory locating somewhere else.
             <small>
             <ul>
               <li><code>git clone &lt;URL&gt;</code> Create a local mirror of the remote repo</li>
               <li><code>git remote add &lt;name&gt; &lt;URL&gt;</code> Add a reference to a remote repo</li>
-              <li><code>git push &lt;name&gt; &lt;branch&gt;</code> Upload (synchronize) current branch to remote repo</li>
-              <li><code>git pull &lt;name&gt; &lt;branch&gt;</code> Upload (synchronize) current branch to remote repo</li>
+              <li><code>git push &lt;name&gt; &lt;branch&gt;</code> Upload (synchronize) the current branch to the remote repo</li>
+              <li><code>git pull &lt;name&gt; &lt;branch&gt;</code> Download (synchronize) the branch in the remote repo and merge it to the current one</li>
             </ul>
             </small>
             <small><p>
@@ -364,8 +373,8 @@
             <ul>
               <li>Resolve conflicts</li>
               <li>Test integrity</li>
-              <li>Keep remote master consistent all the time</li>
             </ul>
+            <li>Keep remote master consistent all the time</li>
             <li>Open issues to document the discussions of problems and decision making processes for later reference</li>
           </ul>
         </section>
