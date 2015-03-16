@@ -63,8 +63,9 @@
 					<p>
 						<small>Created by <a href="http://spacelis.github.io">Wen Li</a> / <a href="http://twitter.com/hakimel">wen.li@ucl.ac.uk</a></small>
 					</p>
-          <div style="float: left; font-size: 9pt">
-          </div>
+          <aside class="notes">
+            The name "git" comes from the creator Torvalds Linus who refers to himself as a "unpleasent person"(git). (from Wiki)
+          </aside>
 				</section>
 
 				<!-- Example of nested vertical slides -->
@@ -78,11 +79,10 @@
             <p class="fragment roll-in"><strong>Repository:</strong> A place (directory) where branches live</p>
             <aside class="notes">
               <ul>
-                <li>list of concepts</li>
-                <li>4 types of objects</li>
-                <li>project files, working set</li>
-                <li>change sets, basically the difference between two version</li>
-                <li>calling as branch means it can split and merge</li>
+                <li>Working directory also refered to as working set/tree, etc. Basically it contains the files regarding the project.</li>
+                <li>In general each project is recommended to reside in their own repository, though it is not a strict rule. It all depends how you want to manage your projects.</li>
+                <li>Each commit contains a description of how files change from the previous version to current one.</li>
+                <li>Branches are usually considered as directions where the development goes, be them a stable release, a new feature, etc. In general the default branch <code>master</code> should leave as the latest usable version while the <code>dev</code> branch may stay at unstable version.</li>
               </ul>
             </aside>
 					</section>
@@ -90,16 +90,27 @@
 						<h2>Commit</h2>
               <p>Basically can be imagined as a diff file containing changes in multiple files</p>
             <img src="./img/commit.png" alt="Smartgit screen shot of a diff"/>
+            <aside class="notes">
+              Hence, the commit contains the changes rather than the new version of file, though when you checkout a commit, it will aggragate the changes from the very beginning up to the commit you checkout which looks like it you get the full version of the file at the commit.
+            </aside>
 					</section>
 					<section>
 						<h2>Branch</h2>
               <p>A series commits that may branch out and be merge with the others. </p>
             <img src="./img/branches.png" alt="Smartgit screen shot of CKAN history"/>
+            <aside class="notes">
+              The branch <code>HEAD</code> are moving with new coming commit and a new commit are always the changes based on the current <code>HEAD</code> version.
+            </aside>
 					</section>
 					<section>
 						<h2>Repository (repo)</h2>
               <p>A place where all branches live, which is named <code>.git</code></p>
             <img src="./img/therepo.png" alt="Smartgit screen shot of CKAN history"/>
+            <aside class="notes">
+              The repo are basically a set of directories and files in a directory in your project root.
+              They may be moved to other places and it will break the information stored in it.
+              It may also be used as another project's remote repo so that there is no need of a central server for using git when syncing two repos.
+            </aside>
 					</section>
 				</section>
 
@@ -120,6 +131,10 @@
                 <img src="./img/Git workflow.svg" alt="">
               </div>
             </small>
+            <aside class="notes">
+              The command are useful when you work with terminal and console.
+              Though the words used in commands sound confusing sometimes, they actually reflect how the code will address the requests.
+            </aside>
           </section>
           <section style="text-align: left">
             <h2>Working with Remote Repo</h2>
@@ -133,9 +148,10 @@
               <li><code>git pull &lt;name&gt; &lt;branch&gt;</code> Download (synchronize) the branch in the remote repo and merge it to the current one</li>
             </ul>
             </small>
-            <small><p>
-              <!-- You may use <code>&#45;&#45;upstream &#38;lt;branch&#38;gt;</code> when calling <code>git push</code> to setup the default upstream branch. -->
-              </p></small>
+            <aside class="notes">
+              The repo can be (optionally) linked to a remote repo and syncing changes.
+              There is a guidelines of working with remote repos under the same account.
+            </aside>
           </section>
           <section style="text-align: left">
             <h2>Summary</h2>
@@ -156,6 +172,12 @@
               <li><code>git checkout -b &lt;new branch&gt;</code> Create a new branch from current point</li>
               <li><code>git merge &lt;branch&gt;</code> Merge the changes from another branch</li>
             </ul>
+            <aside class="notes">
+              Using GUI might look easier, but understand the basic command will help you reason the behaviors of git.
+              The most hard and useful command is merge.
+              There might be conflicts when one merge two branches which happened to have changes on the same lines.
+              Check out the later screencasts for conflict resolution.
+            </aside>
           </section>
         </section>
 
@@ -174,6 +196,12 @@
             </li>
             <li>You can even setup static website on it</li>
           </ul>
+          <aside class="notes">
+            As the most popular open source project hosting service, github provides features more than just hosting a remote repo.
+            This slides are actually hosted on the Github alone which are called "Pages".
+            The files served by Github are saved on "gh-pages" branches (default file: index.html).
+            You may find out how this can be done for your project website on Github.
+          </aside>
         </section>
 
           <section style="text-align: left">
@@ -185,6 +213,11 @@
               <li>Standalone: supporting various work flow/style</li>
               <li>Cross platform: available on Windows, Linux, Mac OS</li>
             </ul>
+            <aside class="notes">
+              This is a standalone application for managing your repos locally.
+              If you are using any IDE, there might be a git plugin for it which may give you better user experience.
+              RStudio has one and eclipse also has one.
+            </aside>
           </section>
         <section>
           <section style="text-align: left">
@@ -400,6 +433,10 @@
               <li class="fragment roll-in">Pull <em>vs</em> Fetch then Merge/Rebase</li>
               <li class="fragment roll-in">Revert <em>vs</em> Reset</li>
             </ul>
+            <aside class="notes">
+              There are some debates around how git should be used, as git provides freedom for how one thing can be done with different commands.
+              You may encounter some of the them online when you look up online for your own problem.
+            </aside>
           </section>
           <section style="text-align: left" data-transition="fade">
             <h1>Debates</h1>
@@ -409,6 +446,17 @@
               <li>Pull <em>vs</em> <span style="text-decoration: line-through">Fetch then Merger/Rebase</span></li>
               <li>Revert <em>vs</em> <span style="text-decoration: line-through">Reset</span></li>
             </ul>
+            <aside class="notes">
+              Generally, the reason for recommending these three alternative is for simplicity and safety.
+              Merging branches will always leave the previous commits untouched so that you can always find back your old versions.
+              Rebasing can provide more clean history as there are less merging branches but it will rewind your history and make a new one for you.
+              This sometimes may results in many conflicts when you try to work with a remote repository.
+              The same applies to reset, as it will alter your history, while revert will just create a new commit containing your old content in your files and leave the unwanted commit untouched.
+              Resetting may also results in annoying conflicts when history are not properly altered.
+              So be careful when you try to use the rebase and reset command.
+              Look into the reference provide in previous slides and make sure you know all the consequence of using the two command.
+              As for pulling, simply do it in one step will not hurt you more than do it in two steps which my left you in confusion when you are a freshman into the git world.
+            </aside>
           </section>
         </section>
 
